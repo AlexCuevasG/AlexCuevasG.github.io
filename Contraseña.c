@@ -19,11 +19,11 @@ sbit LCD_D4_Direction at TRISB0_bit;
 int cont;                           // Variable cont
 int kp;                             // Variable kp
 const int t=200;
-char contra[]={"B563"};             // Char con contrase�a del equipo
+char contra[]={"B563"};             // Char con contraseña del equipo
 char password[5]={" "};
 
 void main() {
-ADCON1=0b1101;          //Conversi�n A/D
+ADCON1=0b1101;          //Conversión A/D
 TRISA=0;
 TRISB=0;
 TRISD=1;
@@ -31,8 +31,8 @@ PORTA=0;
 PORTB=0;
 PORTD=0;
 
-Keypad_Init();         // Inicializaci�n de Keypad
-Lcd_Init();            // Inicializaci�n del display LCD
+Keypad_Init();         // Inicialización de Keypad
+Lcd_Init();            // Inicialización del display LCD
 
 while(1){
 LCD_Cmd(_LCD_CLEAR);
