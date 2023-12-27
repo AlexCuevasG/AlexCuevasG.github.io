@@ -1,6 +1,6 @@
 const int tiempo=1000;  //Valor de tiempo
 void main() {
-  ADCON1=0b1111;  // Comversi�n A/D
+  ADCON1=0b1111;  // Comversión A/D
   TRISB=0;        // Declarara puertos de salida
   TRISD=0;        // Declarara puertos de salida
   PORTB=0;        // Se asigna valor de 0
