@@ -1,15 +1,15 @@
-const int tiempo=1000;  //Valor de tiempo
+const int tiempo=1000;  
 void main() {
-  ADCON1=0b1111;  // Comversión A/D
-  TRISB=0;        // Declarara puertos de salida
-  TRISD=0;        // Declarara puertos de salida
-  PORTB=0;        // Se asigna valor de 0
-  PORTD=0;        // Se asigna valor de 0
+  ADCON1=0b1111; 
+  TRISB=0;        
+  TRISD=0;       
+  PORTB=0;       
+  PORTD=0;        
   
-  do{ // Ciclo infinito
-  if(PORTC.F0==0) //Si Bit 0 es 0 seguir condicionante
+  do{ 
+  if(PORTC.F0==0) 
   {
-   PORTB=0;  //Puerto B se queda con valor de 0
+   PORTB=0;  
    PORTD=0b00111111;   //Cero
    delay_ms(tiempo);
    PORTD=0b00000110;   //Uno
@@ -33,7 +33,7 @@ void main() {
    }
    else if (PORTC.F1==0)
    {
-    PORTD=0;  //Puerto D se queda con valor de 0
+    PORTD=0;  
     PORTB=0b01110111;   //A
     delay_ms(tiempo);
     PORTB=0b01111100;   //B
