@@ -1,14 +1,14 @@
-int contador=0;        // Se declara variable con valor en 0
-const int tiempo=100;  // Valor de tiempo
+int contador=0;        
+const int tiempo=100; 
 void main() {
-  ADCON1=0b1111;       // Conversión A/D
-  TRISB=0;             // Declara puertos de salida
-  TRISD=0;             // Declara puertos de salida
-  PORTB=0;             // Se asigna valor de 0
-  PORTD=0;             // Se asigna valor de 0
+  ADCON1=0b1111;       
+  TRISB=0;            
+  TRISD=0;             
+  PORTB=0;            
+  PORTD=0;             
   
-  do{ //Ciclo infinito
-  if(contador==0) //Seguir condicionante del 1-9 mientras este el valor 0
+  do{ 
+  if(contador==0) 
   {
    PORTB=0b00111111;
   }
@@ -33,8 +33,8 @@ void main() {
      PORTD=0b01101111;   //Nueve
      delay_ms(tiempo);
 
-     contador=contador+1; //Se suma 1 a la variable
-     if (contador==1) //Mientras se va sumando 1 a la variable, el puerto b irá incrementando su valor.
+     contador=contador+1; 
+     if (contador==1) 
      {
       PORTB=0b00000110;   //Uno
       }
